@@ -1,1 +1,24 @@
 @import "bootstrap";
+
+.navbar {
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  box-shadow: 0px 1px 3px #e97f11fc;
+  background: image_url('terrazzo.png'); 
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  font-size: 34px;
+  color: #e97f11fc;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+  font-size: 22px;
+  color: #e97f11fc
+}
+
+.navbar-inverse .navbar-toggler-icon {
+  color: #e97f11fc
+}
