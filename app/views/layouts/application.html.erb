@@ -7,12 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style>
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-</style>
+    <style>@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+  </style>
   </head>
 
   <body>
+    <div id="flex-content-container">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,19 +45,27 @@
 
 
     <% if notice.present? %>
-    <p class="alert alert-info alert-dismissible fade show"><%= notice %><button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button></p>
-    
+      <p class="alert alert-info alert-dismissible fade show"><%= notice %><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button></p>
     <% end %>
+
     <% if alert.present? %>
-    <p class="alert alert-danger alert-dismissible fade show"><%= alert %><button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button></p>
-    
+      <p class="alert alert-danger alert-dismissible fade show"><%= alert %><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button></p>
     <% end %>
 
 
     <%= yield %>
-  </body>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <b>Footer Here</b>
+      <br />
+      <%= link_to 'Link', '#' %>
+    </div>
+  </div>
+</body>
 </html>
