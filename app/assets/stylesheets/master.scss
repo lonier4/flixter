@@ -79,6 +79,11 @@ body {
   border: 2px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 10px;
+
+  .thumbnail {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .booyah-box h2, .booyah-box h1 {
@@ -115,3 +120,4 @@ body {
   font-weight: 100;
   font-size: 25px;
 }
+
