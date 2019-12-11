@@ -80,11 +80,11 @@
         <div class="col-12 col-sm-3">
           <b>About</b>
           <br />
-          <%= link_to 'Team', '#' %>
+          <%= link_to 'Team', team_path %>
           <br />
-          <%= link_to 'Careers', '#' %>
+          <%= link_to 'Careers', career_path %>
           <br />
-          <%= link_to 'Privacy Policy', '#' %>
+          <%= link_to 'Privacy Policy', privacy_path %>
         </div>
         <div class="col-12 col-sm-3">
           <b>Contact</b>
@@ -95,15 +95,19 @@
           <br />
           Austin TX, 78321
         </div>
+
         <div class="col-12 col-sm-3 social">
           <b>Social</b>
           <br />
-          <br />
+          
+          
           <%= link_to 'http://github.com/lonier4' do %>
             <span class="fa fa-github-square fa-2x social-button"></span>
           <% end %>
           <br />
-          <span class="fa fa-twitter-square fa-2x social-button"></span>
+          <%= link_to 'https://twitter.com/CantaloupesD' do %>
+            <span class="fa fa-twitter-square fa-2x social-button"></span>
+          <% end %>
         </div>
       </div>
     </div>

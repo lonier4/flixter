@@ -40,6 +40,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
+h2 {
+  font-size: 23px;
+}
+
+.description {
+  font-size: 21px;
+}
+
 .frosty {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -158,4 +166,10 @@ ul .header .fa {
 
 .lessons li p {
   margin: 0;
+}
+
+.static {
+  max-height: 600px;
+  width: 85%;
+  object-fit: contain;
 }
