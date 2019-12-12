@@ -1,36 +1,33 @@
 <script>
-$('.new-lesson-button').click(function( event ) {
-  var lessonUrl = $( event.target).data('lesson-url');
-  $('#newLessonForm').attr('action', lessonUrl);
-});
+  $(function() {
+    $('.new-lesson-button').click(function( event ) {
+      var lessonUrl = $( event.target).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
+    });
 
-$(function() {
-  $('.sections').sortable({
-    update: function( event, ui ){
-      $.ajax({
-        type: 'PUT',
-        url: ui.item.data('update-url'),
-        dataType: 'json',
-        data: { section: { row_order_position: ui.item.index() } }
-      });
-     }
-  });
-});
-</script>
+    $('.lessons').sortable({
+      update: function( event, ui ){
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order_position: ui.item.index() } }
+        });
+       }
+    });
 
-<script> 
-$(function() {
-  $('.lessons').sortable({
-    update: function( event, ui ){
-      $.ajax({
-        type: 'PUT',
-        url: ui.item.data('update-url'),
-        dataType: 'json',
-        data: { lesson: { row_order_position: ui.item.index() } }
-      });
-     }
+    $('.sections').sortable({
+      update: function( event, ui ){
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+       }
+    });
+
   });
-});
 </script>
 
 <br />
@@ -133,7 +130,7 @@ $(function() {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <%= simple_form_for @lesson, url: '#', html: {id: 'newLessonForm'} do |f| %>
+      <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
         <div class="modal-body">
           <%= f.input :title %>
           <%= f.input :subtitle %>
