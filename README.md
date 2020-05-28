@@ -2,7 +2,7 @@
 
 # Flixter
 
-Ruby/Ruby on Rails / AWS / JavaScript / jQuery / AJAX / postgreSQL / REST APIs
+### Ruby/Ruby on Rails / AWS / JavaScript / jQuery / AJAX / postgreSQL / REST APIs
 
 The application is a two-sided video-streaming marketplace, featuring credit card payment capabilities for students to sign up for courses. User role management comes into play to manage students and teachers separate pages and the postgreSQL database.
 
